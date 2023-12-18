@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Booking_Hotel.Models.Product>
+@{
+    ViewData["Title"] = "IndexProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+              <div class="our_room">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <p class="margin_0" _msttexthash="1861951" _msthash="11">Lorem Ipsum available, but the majority have suffered </p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+            @foreach(var item in Model)
+            {
+                
+            
+            <div class="col-md-4 col-sm-6">
+                  <div id="serv_hover" class="room">
+                     <div class="room_img">
+                        <figure><img src="@item.ProductImage" alt="#" _mstalt="3185" _msthash="12"></figure>
+                     </div>
+                     <div class="bed_room">
+                       <a href="~/Products/ProductDetail?id=@item.ProductId"> <h3 _msttexthash="90480" _msthash="13">@item.ProductName</h3>  </a>
+                        <p _msttexthash="2919176" _msthash="14">@item.ProductDescription</p>
+                     </div>
+                  </div>
+               </div>
+            } 
+            </div>
+         </div>
+      </div>

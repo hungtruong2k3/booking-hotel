@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Booking_Hotel.Models.Product
+@{
+    ViewData["Title"] = "ProductDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1> trang chi tiết sản phẩm</h1>
+<div id="serv_hover" class="room">
+                     <div class="room_img">
+                        <figure><img src="@Model.ProductImage" alt="#"></figure>
+                     </div>
+                     <div class="bed_room">
+                        <h3>@Model.ProductName</h3>
+                        <p>@Model.ProductDescription </p>
+                      <button class="primary-btn">Mua</button>
+                     </div>
+                  </div>
